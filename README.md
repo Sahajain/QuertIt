@@ -56,15 +56,6 @@ pip install streamlit==1.27.0 langchain==0.0.267 faiss-cpu==1.7.4 azure-ai-texta
    ```
    The app will be available at `http://localhost:8501`.
 
-### Docker Setup (Optional)
-1. Build the Docker image:
-   ```bash
-   docker build -t queryit .
-   ```
-2. Run the container:
-   ```bash
-   docker run -p 8501:8501 --env-file .env queryit
-   ```
 
 ## Usage
 
@@ -93,8 +84,7 @@ queryit/
 ├── styles1.css             # Custom CSS for UI styling
 ├── requirements.txt        # Python dependencies
 ├── .env                   # Environment variables (not tracked)
-├── README.md              # Project documentation
-└── Dockerfile             # Docker configuration (optional)
+└── README.md              # Project documentation
 ```
 
 ## Dependencies
@@ -109,34 +99,5 @@ queryit/
 - **Tesseract**: OCR for image processing.
 - **markdown**: Markdown parsing.
 
-## Privacy and Security
 
-- **Temporary Files**: SQLite database files are processed in a temporary `temp.db` file, which is deleted after use to prevent persistent storage.
-- **Environment Variables**: Sensitive API keys are stored in a `.env` file, excluded from version control.
-- **Error Handling**: Robust try-except blocks ensure graceful handling of unsupported formats or processing errors.
 
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/your-feature`).
-3. Commit changes (`git commit -m "Add your feature"`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a pull request.
-
-Please ensure code follows PEP 8 standards and includes relevant tests.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Built with [Streamlit](https://streamlit.io/), [LangChain](https://langchain.com/), and [FAISS](https://faiss.ai/).
-- Powered by [Azure OpenAI](https://azure.microsoft.com/en-us/services/openai/).
-- Inspired by advancements in document intelligence and RAG frameworks.
-
-## Contact
-
-For questions or support, contact [your-email@example.com] or open an issue on GitHub.
